@@ -105,7 +105,6 @@ jobs:
       - name: Prepare YouTube iPA
         id: prepare_youtube
         run: |
-          mkdir main
           wget "$YOUTUBE_URL" --header="NGROK: ngrok-skip-browser-warning" --no-verbose -O main/YouTube.ipa
           cd ${{ github.workspace }}/main
           mv YouTube.ipa YouTube.zip
